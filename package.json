@@ -1,0 +1,25 @@
+{
+  "name": "tiny-avatar",
+  "version": "1.0.0",
+  "description": "A library to procedurally generate unique and cute avatars.",
+  "keywords": [
+    "avatar",
+    "svg",
+    "ui"
+  ],
+  "author": "Axel Penin <penin.axel@gmail.com>",
+  "license": "MIT",
+  "main": "dist/tiny-avatar.js",
+  "dependencies": {
+    "tinycolor2": "^1.6.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.9.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config build/rollup.config.js --bundleConfigAsCjs"
+  }
+}

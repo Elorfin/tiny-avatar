@@ -1,0 +1,84 @@
+body {
+    --bs-root-font-size: 18px !important;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+.header {
+    //background: #74c0fc;
+    /*background: #e599f7;*/
+}
+
+.avatar-preview {
+
+}
+
+.avatar-preview .avatar {
+    height: 20rem;
+    width: 20rem;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    #background: #F5F5ED;
+
+    width: 80px;
+    height: 80px;
+}
+
+.avatar-round {
+    border-radius: 50rem;
+}
+
+.avatar-lg {
+    height: 120px;
+    width: 120px;
+}
+
+.avatar-md {
+    width: 80px;
+    height: 80px;
+}
+
+.avatar-sm {
+    width: 40px;
+    height: 40px;
+}
+
+svg {
+    shape-rendering: geometricPrecision;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Crowd */
+.crowd {
+    position: relative;
+    height: 25rem;
+    width: 100%;
+}
+.crowd-avatar {
+    position: absolute;
+    display: inline-block;
+}
+
+.avatar-0 { width: 9rem; height: 9rem; bottom: 0; right: 0; z-index: 1;}
+.avatar-1 { width: 5rem; height: 5rem; bottom: 0; right: 10rem; z-index: 1;}
+.avatar-2 { width: 24rem; height: 24rem; bottom: 0; right: -2rem; z-index: 0;}
+.avatar-3 { width: 12rem; height: 12rem; bottom: 0; right: 12rem; }
+.avatar-4 { width: 9rem; height: 9rem; bottom: 0; right: 20rem; z-index: 4; }
+/*.avatar-5 { width: 4rem; height: 4rem; bottom: 0; right: 19rem; }*/
+.avatar-5 { width: 15rem; height: 15rem; bottom: 0; right: 21rem; z-index: 3; }
+/*.avatar-7 { width: 18rem; height: 18rem; bottom: 0; right: 29rem; z-index: 2; }*/
+.avatar-6 { width: 4rem; height: 4rem; bottom: 0; right: 30rem; z-index: 4; }
+.avatar-7 { width: 8rem; height: 8rem; bottom: 0; right: 31.5rem; z-index: 3; }
+.avatar-8 { width: 10rem; height: 10rem; bottom: 0; right: 37rem; z-index: 3; }

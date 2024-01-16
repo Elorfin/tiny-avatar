@@ -1,0 +1,47 @@
+#!/usr/bin/env php
+<?php
+
+const SOURCE = __DIR__.'/../assets/source.svg';
+const DESTINATION = __DIR__.'/../assets/parts.js';
+
+if (!file_exists(SOURCE)) {
+    throw new \InvalidArgumentException(
+        sprintf('Cannot find asset named "%s".', SOURCE)
+    );
+}
+
+$svg = file_get_contents(SOURCE);
+
+$crawler = new \SimpleXMLElement($svg);
+
+$exported = [
+    'body' => null,
+    'head' => [],
+    'eyes' => [],
+    'mouth' => [],
+];
+
+$toImport = ['head', 'eyes', 'mouth'];
+foreach ($crawler->children() as $child) {
+    $attr = $child->attributes();
+
+    $id = null;
+    if ($attr && $attr['id']) {
+        $id = strtolower((string) $attr['id']);
+    }
+
+    if (!$id) {
+        continue;
+    }
+
+    // TODO : remove wrapping <g>
+    if ('body' === $id) {
+        $exported[$id][] = $child->asXML();
+    } else if (in_array(strtolower($id), $toImport)) {
+        foreach ($child as $bodyPart) {
+            $exported[$id][] = $bodyPart->asXML();
+        }
+    }
+}
+
+file_put_contents(DESTINATION, sprintf("export const library = %s", json_encode($exported)));
