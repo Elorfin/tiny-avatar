@@ -1,17 +1,17 @@
-<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 420 730">
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 420 730" shape-rendering="geometricPrecision">
     <style>
         .stroke {
-            stroke: #000;
+            stroke: #fff;
         }
         .fill {
-            fill: #000;
+            fill: #fff;
         }
         [data-bs-theme="dark"] {
             .stroke {
-            stroke: #fff;
+                stroke: #fff;
             }
             .fill {
-            fill: #fff;
+                fill: #fff;
             }
         }
     </style>

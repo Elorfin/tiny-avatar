@@ -10,15 +10,16 @@ function randomString(len, charSet) {
 
 function generateBig() {
   const container = document.querySelector('.avatar-preview')
-  appendAvatar(randomString(32), container, 'avatar bg-body-tertiary avatar-round avatar-lg')
+  appendAvatar(randomString(32), container, 'avatar rounded-circle', {background: false})
+
+  setInterval(function () {
+    appendAvatar(randomString(32), container, 'avatar rounded-circle', {background: false}, true)
+  }, 2500)
 }
 
-function generateCrowd() {
-  const crowd = document.querySelector('.crowd')
-
-  for (let i = 0; i < 9; i++) {
-    appendAvatar(randomString(32), crowd, `crowd-avatar avatar-${i}`, {background: false})
-  }
+function generatePilot() {
+  const container = document.querySelector('.ufo-pilot')
+  appendAvatar(randomString(32), container, '', {background: false})
 }
 
 function generateGrid(container, samples, className) {
@@ -27,12 +28,17 @@ function generateGrid(container, samples, className) {
   })
 }
 
-function appendAvatar(string, container, classNames, options) {
+function appendAvatar(string, container, classNames, options, replace = false) {
   const avatar = TinyAvatar(string, options)
 
   const avatarDom = document.createElement('div')
   avatarDom.classList = classNames
   avatarDom.innerHTML = avatar + '<span class="visually-hidden">'+string+'</span>'
 
-  container.append(avatarDom)
+  if (replace) {
+    container.replaceChildren(avatarDom)
+
+  } else {
+    container.append(avatarDom)
+  }
 }

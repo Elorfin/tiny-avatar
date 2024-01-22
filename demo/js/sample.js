@@ -45,14 +45,13 @@ var sampleData = [
   "john.smith@hormail.fr",
   "jane.doe@orange.fr",
   "jane.watts@gmail.fr",
-  "paulineballot@yahoo.fr",
   "contact@claroline.com",
   "support@claroline.com",
   "claroline@connect.fr",
   "another@test.fr",
   "another@example.fr",
   "TinyAvatar",
-  "Elorfin",
+  /*"Elorfin",
   "Corum",
-  "Claroline Connect"
+  "Claroline Connect"*/
 ]

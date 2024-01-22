@@ -9,7 +9,9 @@
         <meta name="description" content="Procedurally draw unique and cute avatars." />
 
         <link rel="icon" href="favicon.svg" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
         <link rel="stylesheet" href="./css/styles.css" />
 
         <script src="./../dist/tiny-avatar.js"></script>
@@ -17,42 +19,77 @@
         <script src="./js/demo.js"></script>
     </head>
 
-    <body class="tiny-avatar-demo">
-        <section class="header">
-            <div class="content-container container position-relative">
-                <div class="brand d-flex position-absolute start-0 top-0 align-items-center m-5">
-                    <img class="logo" src="../assets/icon.svg" alt="TinyAvatar logo" />
-                    <h1 class="fw-light m-0">
-                        <small class="d-block fw-900">tiny</small>
-                        AVATAR
-                    </h1>
+    <body>
+        <div class="jumbotron position-relative" role="presentation">
+
+            <img src="img/moon.svg" height="300" class="position-absolute start-0 top-0 m-5" />
+            <div class="content-container container">
+                <header class="header">
+                    <a href="index.html" class="header-link">
+                        <img class="logo" src="./img/icon.svg" alt="TinyAvatar logo" />
+                    </a>
+
+                    <a href="get-started.html" class="header-link">Get started</a>
+                    <a href="docs.html" class="header-link">Docs</a>
+                    <a href="examples.html" class="header-link">Examples</a>
+                    <a href="docs.html" class="header-link ms-auto fs-3">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span class="visually-hidden">Github</span>
+                    </a>
+                </header>
+
+                <div class="row">
+                    <div class="col-7 my-5">
+                        <h1 class="mb-5">Invite cute avatars in your app</h1>
+                        <p class="lead mb-5">
+                            <b>TinyAvatar</b> is a small JavaScript library to procedurally generate unique SVG image.
+                        </p>
+
+                        <div class="mb-5 d-flex gap-3">
+                            <a href="" class="btn btn-light btn-lg flex-fill">Get started</a>
+                            <a href="" class="btn btn-lg btn-outline-light flex-fill">Read the docs</a>
+                        </div>
+                    </div>
+
+                    <div class="col-5 position-relative">
+                        <div class="ufo-pilot mt-5 position-absolute start-50"></div>
+                        <img class="ufo mt-5" src="img/ufo.svg" width="100%" />
+                        <!--<div class="crowd"></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="text-bg-highlight text-center city">
+            <div class="content-container container py-5">
+                <div class="row">
+                    <form class="demo-form gap-5 mb-5 col-9 mx-auto">
+                        <div class="avatar-preview"></div>
+                        <div class="text-start">
+                            <h2 class="fw-semibold">Befriend your first TinyAvatar</h2>
+                            <p class="lead">
+                                Tip in your <span class="fw-bold text-highlight">email</span>,
+                                <span class="fw-bold text-highlight">favorite username</span> or <span class="fw-bold text-highlight">pet's name</span> to discover which TinyAvatar will appear:
+                            </p>
+
+                            <input type="text" class="form-control form-control-lg rounded-pill mb-3" placeholder="eg. penin.axel@gmail.com"/>
+                        </div>
+                    </form>
                 </div>
 
-                <div class="crowd"></div>
+                <p class="lead">You are appealed by this little creature but don't know if you should invite all of its friends in your app ?</p>
             </div>
         </section>
+
+        <h1 class="text-center mt-5">We come in peace</h1>
 
         <section class="">
             <div class="content-container container py-5">
-                <p class="text-center fs-3">Unique and cute avatars.</p>
-                <p class="text-center lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante dolor, convallis id mattis vel, viverra pellentesque enim, consectetur adipiscing elit. Quisque ante dolor, convallis id mattis vel, viverra pellentesque enim.</p>
-                <div class="row">
-                    <div class="col-12 avatars-grid d-flex gap-2 flex-wrap justify-content-center"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="text-bg-dark text-center">
-            <div class="content-container container py-5">
-                <div class="row">
-                    <div class="col-6 mx-auto d-flex gap-3">
-                        <a href="" class="btn btn-primary btn-lg flex-fill">Getting started</a>
-                        <a href="" class="btn btn-lg btn-outline-primary flex-fill">Documentation</a>
-                    </div>
-                </div>
-
-                <p class="lead mt-5">You are appealed by this cute little creatures but don't know if you should befriend them ?</p>
-                <h2 class="text-uppercase fw-bolder">They come...</h2>
+                <h2 class="fw-semibold">We are <span class="fw-bold text-highlight">easy</span> to tame</h2>
+                <p class="lead">
+                    You only need <b class="fw-bold">a few lines of code</b> to invite them in your website.
+                </p>
+                <a href="" class="btn btn-primary btn-lg flex-fill">Get started</a>
             </div>
         </section>
 
@@ -60,8 +97,9 @@
             <div class="content-container container py-5">
                 <div class="row">
                     <div class="col-6 text-end">
-                        <h2 class="text-uppercase fw-bolder h3">In any size <small class="d-block fw-light">to sneak in anywhere</small></h2>
-                        <p class=" lead text-secondary"></p>
+                        <h2 class="fw-semibold">We come in <span class="fw-bold text-highlight">any size</span></h2>
+                        <p class="lead">to sneak in anywhere</p>
+                        <p>TinyAvatars are drawn in SVG to ensure perfect rendering in <span class="fw-bold">all the sizes</span> you need or let them be <span class="fw-bold">responsive</span>. It's up to you !</p>
                     </div>
 
                     <div class="col-6">
@@ -86,40 +124,66 @@
 
         <section class="">
             <div class="content-container container py-5">
-                <h2 class="text-uppercase fw-bolder h3">In any shape <small class="d-block fw-light">to fit in anywhere</small></h2>
-                <p class=" lead text-secondary"></p>
+                <h2 class="fw-semibold">We come in <span class="fw-bold text-highlight">any shape</span></h2>
+                <p class="lead">to fit in anywhere</p>
+            </div>
+        </section>
+
+        <section class="bg-body-tertiary">
+            <div class="content-container container py-5">
+                <h2 class="fw-semibold">We come in <span class="fw-bold text-highlight">any color</span></h2>
+                <p class="lead">to bright in anywhere or blend into your own design</p>
             </div>
         </section>
 
         <section class="">
             <div class="content-container container py-5">
-                <h2 class="text-uppercase fw-bolder h3">In any color <small class="d-block fw-light">to bright in anywhere</small></h2>
-                <p class=" lead text-secondary"></p>
+                <h2 class="fw-semibold">We speak <span class="fw-bold text-highlight">many languages</span></h2>
+                <p class="lead">to befriend everyone</p>
+                <p>TinyAvatar is written in vanilla JavaScript and SVG, making it naturally <span class="fw-bold">compatible with your preferred JavaScript environment</span>: NodeJS, React, Angular, Vue.js and many more...</p>
             </div>
         </section>
 
-        <section class="text-bg-dark">
+        <section class="text-bg-highlight">
             <div class="content-container container py-5">
-                <h2 class="text-uppercase fw-bolder h3">And so small <small class="d-block fw-light">you won't even see them coming to live with you !</small></h2>
-                <p class="lead text-secondary"></p>
+                <h2 class="fw-semibold">And so <span class="fw-bold text-highlight">small</span></h2>
+                <p class="lead">you won't even see them coming to live with you !</p>
+
+                <div class="feature-article">
+                    <span class="fa-solid fa-feather"></span>
+                    <div>
+                        <h3>Lightweight</h3>
+
+                    </div>
+                </div>
+
+                <div class="feature-article">
+                    <span class="fa-solid fa-truck-fast"></span>
+                    <div>
+                        <h3>Fast rendering</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="">
             <div class="content-container container py-5">
+                <div class="row">
+                    <div class="col-12 avatars-grid d-flex gap-2 flex-wrap justify-content-center"></div>
+                </div>
             </div>
         </section>
 
         <script>
           (function() {
-            //generateBig()
-            generateCrowd()
+            generateBig()
+            generatePilot()
 
-            generateGrid(document.querySelector('.avatars-grid'), sampleData, 'avatar-round')
+            generateGrid(document.querySelector('.avatars-grid'), sampleData, 'rounded-circle')
             // sizing
-            generateGrid(document.querySelector('.avatars-grid-sm'), sampleData.slice(0, 8), 'avatar-round avatar-sm')
-            generateGrid(document.querySelector('.avatars-grid-md'), sampleData.slice(0, 4), 'avatar-round avatar-md')
-            generateGrid(document.querySelector('.avatars-grid-lg'), sampleData.slice(0, 3), 'avatar-round avatar-lg')
+            generateGrid(document.querySelector('.avatars-grid-sm'), sampleData.slice(0, 7), 'rounded-circle avatar-sm')
+            generateGrid(document.querySelector('.avatars-grid-md'), sampleData.slice(0, 3), 'rounded-circle avatar-md')
+            generateGrid(document.querySelector('.avatars-grid-lg'), sampleData.slice(0, 2), 'rounded-circle avatar-lg')
           })()
         </script>
     </body>
